@@ -28,7 +28,7 @@ CREATE TABLE `pedidos` (
   `status_is` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `pizza_id` (`pizza_id`),
-  KEY `status_is` (`status_is`),
+  KEY `status_is` (`status_id`),
   CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`pizza_id`) REFERENCES `pizzas` (`id`),
   CONSTRAINT `pedidos_ibfk_2` FOREIGN KEY (`status_is`) REFERENCES `status` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
